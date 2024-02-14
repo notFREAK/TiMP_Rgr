@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GameTableController">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <Button fx:id="exitButton" mnemonicParsing="false" onAction="#exit" text="Exit" />
+            <Button fx:id="restartButton" mnemonicParsing="false" onAction="#restart" text="Restart" />
+            <Label fx:id="roundName" alignment="CENTER" prefHeight="17.0" prefWidth="400.0" text="ROUNDNAME" />
+         </items>
+      </ToolBar>
+      <AnchorPane layoutY="40.0" prefHeight="315.0" prefWidth="600.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+         <children>
+            <ImageView fitHeight="320.0" fitWidth="600.0" focusTraversable="true" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@img/table.png" />
+               </image></ImageView>
+            <AnchorPane fx:id="player1" layoutX="14.0" layoutY="14.0" prefHeight="100.0" prefWidth="241.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="14.0">
+               <children>
+                  <ImageView fitHeight="71.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/nametagright.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="79.0" fitWidth="75.0" layoutX="-1.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/avatar1.png" />
+                     </image></ImageView>
+                  <VBox layoutX="69.0" layoutY="10.0" prefHeight="52.0" prefWidth="110.0">
+                     <children>
+                        <Label fx:id="player1Name" alignment="CENTER" prefHeight="28.0" prefWidth="104.0" text="PLAYER1NAME" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label fx:id="player1Cash" alignment="CENTER" prefHeight="27.0" prefWidth="99.0" text="PLAYER1CASH" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="155.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="player1Bet" alignment="CENTER" layoutX="173.0" layoutY="64.0" text="PLAYER1BET" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="player2" layoutX="14.0" layoutY="210.0" prefHeight="100.0" prefWidth="254.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0">
+               <children>
+                  <ImageView fitHeight="71.0" fitWidth="213.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/nametagright.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="76.0" layoutX="-1.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/avatar2.png" />
+                     </image></ImageView>
+                  <VBox layoutX="69.0" layoutY="13.0" prefHeight="52.0" prefWidth="110.0">
+                     <children>
+                        <Label fx:id="player2Name" alignment="CENTER" layoutY="-20.0" prefHeight="28.0" prefWidth="104.0" text="PLAYER2NAME" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label fx:id="player2Cash" alignment="CENTER" layoutY="7.0" prefHeight="27.0" prefWidth="99.0" text="PLAYER2CASH" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="17.0" fitWidth="20.0" layoutX="190.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="player2Bet" alignment="CENTER" layoutX="174.0" layoutY="6.0" text="PLAYER2BET" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="player5" layoutX="344.0" layoutY="6.0" prefHeight="100.0" prefWidth="241.0" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="6.0">
+               <children>
+                  <ImageView fitHeight="71.0" fitWidth="213.0" layoutX="47.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/nametagright.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="80.0" layoutX="46.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/avatar5.png" />
+                     </image></ImageView>
+                  <VBox layoutX="116.0" layoutY="10.0" prefHeight="52.0" prefWidth="110.0">
+                     <children>
+                        <Label fx:id="player5Name" alignment="CENTER" layoutX="47.0" prefHeight="28.0" prefWidth="104.0" text="PLAYER5NAME" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label fx:id="player5Cash" alignment="CENTER" layoutX="47.0" layoutY="27.0" prefHeight="27.0" prefWidth="99.0" text="PLAYER5CASH" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="83.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="player5Bet" alignment="CENTER" layoutY="71.0" text="PLAYER5BET" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="player4" layoutX="359.0" layoutY="187.0" prefHeight="100.0" prefWidth="261.0" AnchorPane.bottomAnchor="33.0" AnchorPane.rightAnchor="-20.0">
+               <children>
+                  <ImageView fitHeight="71.0" fitWidth="213.0" layoutX="58.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/nametagright.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="78.0" fitWidth="75.0" layoutX="58.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/avatar4.png" />
+                     </image></ImageView>
+                  <VBox layoutX="127.0" layoutY="39.0" prefHeight="52.0" prefWidth="110.0">
+                     <children>
+                        <Label fx:id="player4Name" alignment="CENTER" layoutX="3.0" layoutY="12.0" prefHeight="28.0" prefWidth="104.0" text="PLAYER4NAME" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label fx:id="player4Cash" alignment="CENTER" layoutX="3.0" layoutY="39.0" prefHeight="27.0" prefWidth="99.0" text="PLAYER4CASH" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="23.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="player4Bet" alignment="CENTER" layoutX="-14.0" layoutY="32.0" text="PLAYER4BET" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="player3" layoutX="211.0" layoutY="245.0" prefHeight="100.0" prefWidth="241.0" AnchorPane.bottomAnchor="-25.0" AnchorPane.leftAnchor="211.0" AnchorPane.rightAnchor="148.0">
+               <children>
+                  <ImageView fitHeight="71.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/nametagright.png" />
+                     </image>
+                  </ImageView>
+                  <VBox layoutX="69.0" layoutY="10.0" prefHeight="52.0" prefWidth="110.0">
+                     <children>
+                        <Label fx:id="player3Name" alignment="CENTER" prefHeight="28.0" prefWidth="104.0" text="PLAYER3NAME" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label fx:id="player3Cash" alignment="CENTER" prefHeight="27.0" prefWidth="99.0" text="PLAYER3CASH" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <Label fx:id="player3Bet" alignment="CENTER" layoutX="69.0" layoutY="-12.0" text="PLAYER3BET" textFill="WHITE">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Label>
+                  <ImageView fitHeight="78.0" fitWidth="75.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/avatar3.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <VBox alignment="CENTER" layoutX="100.0" layoutY="93.0" prefHeight="104.0" prefWidth="400.0">
+               <children>
+                  <Label fx:id="bank" text="" textFill="#fffdfd">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Label>
+                  <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="100.0" prefWidth="400.0">
+                     <children>
+                        <ImageView fx:id="board0" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="board1" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="board2" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="board3" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fx:id="board4" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label fx:id="errorMSG" alignment="CENTER" layoutX="300.0" layoutY="302.0" prefHeight="17.0" prefWidth="241.0" text="" />
+            <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="344.0" layoutY="233.0" pickOnBounds="true" preserveRatio="true" />
+            <HBox fx:id="hand" layoutX="14.0" layoutY="207.0" prefHeight="106.0" prefWidth="71.0">
+               <children>
+                  <ImageView fx:id="hand0" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="hand1" fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <ToolBar layoutY="355.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <items>
+            <Button fx:id="foldButton" mnemonicParsing="false" onAction="#fold" text="Fold" />
+            <Button fx:id="allInButton" mnemonicParsing="false" onAction="#allIn" text="Allin" />
+            <Button fx:id="raiseButton" mnemonicParsing="false" onAction="#raise" text="Raise">
+               <graphic>
+                  <TextField fx:id="raiseAmount" alignment="CENTER" promptText="Введите ставку" />
+               </graphic>
+            </Button>
+            <Button fx:id="checkButton" mnemonicParsing="false" onAction="#check" text="Check" />
+            <Button fx:id="next" mnemonicParsing="false" onAction="#next" text="Дaлее" visible="false" />
+            <HBox prefHeight="36.0" prefWidth="98.0" visible="false" />
+            <Button fx:id="toggleHandButton" mnemonicParsing="false" onAction="#toggleHand" text="Show hand" />
+         </items>
+      </ToolBar>
+   </children>
+</AnchorPane>
